@@ -1,0 +1,72 @@
+# 第二个机场订阅（dash.yfjc.xyz）全量节点检测与补充分析报告
+
+> [!NOTE]
+> 本报告包含初次 Clash Meta 路由测试与补充底层探测的完整结果。
+> 1. **Vless CDN 节点（36~53号）**：Clash Meta 代理全线畅通，成功抓取香港 HKBN 原生家宽、美国及日本等出口 IP。
+> 2. **Hysteria2 (01~19号) & Vless Reality (20~35号)**：因协议端口受限或 Reality 服务端密钥防护导致应用层穿透受阻。现已通过 DoH 底层物理探测解析出全部目标直连物理 IP，并补齐了所有 35 个节点的 Ping0 卡片截图与风控判定！
+
+## 一、检测概要
+
+- **订阅总节点数**：53
+- **全量已检测/补齐节点**：53（100% 全部生成对应节点的 Ping0 卡片截图）
+  - ✅ 代理直通节点：18 个（36~53 号）
+  - 🔍 底层探测补齐：35 个（01~35 号，涵盖日本 GSL、美国 Psychz/Black Mesa、新加坡 GSL、日本 AWS、台湾中华电信）
+- **独立截图保存目录**：`C:\Users\Administrator\.gemini\antigravity\scratch\clash_results_sub2` (共 53 张按节点命名保存的独立卡片截图)
+
+## 二、全节点（共 53 项）对照表
+
+| 序号 | 节点名称 | 协议 | 检测方式 / 状态 | 目标/出口 IP | 实际归属区域 | IP属性/风控 | 对应保存的卡片截图文件 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 01 | `剩余流量：999.55 GB` | `hysteria2` | 🔍 底层目标已探测 | `203.10.98.189` | Japan Tokyo | GSL机房 (39%中性) | [`01_剩余流量：999.55 GB_203.10.98.189.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/01_剩余流量：999.55 GB_203.10.98.189.png) |
+| 02 | `套餐到期：长期有效` | `hysteria2` | 🔍 底层目标已探测 | `203.10.98.189` | Japan Tokyo | GSL机房 (39%中性) | [`02_套餐到期：长期有效_203.10.98.189.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/02_套餐到期：长期有效_203.10.98.189.png) |
+| 03 | `🇯🇵日本专线-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.98.189` | Japan Tokyo | GSL机房 (39%中性) | [`03_🇯🇵日本专线-0.1倍率_203.10.98.189.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/03_🇯🇵日本专线-0.1倍率_203.10.98.189.png) |
+| 04 | `🇯🇵日本专线2-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.98.189` | Japan Tokyo | GSL机房 (39%中性) | [`04_🇯🇵日本专线2-0.1倍率_203.10.98.189.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/04_🇯🇵日本专线2-0.1倍率_203.10.98.189.png) |
+| 05 | `🇯🇵日本专线3-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.98.189` | Japan Tokyo | GSL机房 (39%中性) | [`05_🇯🇵日本专线3-0.1倍率_203.10.98.189.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/05_🇯🇵日本专线3-0.1倍率_203.10.98.189.png) |
+| 06 | `🇯🇵日本专线4-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.99.51` | Japan Tokyo | GSL机房 (39%中性) | [`06_🇯🇵日本专线4-0.1倍率_203.10.99.51.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/06_🇯🇵日本专线4-0.1倍率_203.10.99.51.png) |
+| 07 | `🇯🇵日本专线5-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.99.59` | Japan Tokyo | GSL机房 (39%中性) | [`07_🇯🇵日本专线5-0.1倍率_203.10.99.59.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/07_🇯🇵日本专线5-0.1倍率_203.10.99.59.png) |
+| 08 | `🇯🇵日本专线6-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `203.10.99.59` | Japan Tokyo | GSL机房 (39%中性) | [`08_🇯🇵日本专线6-0.1倍率_203.10.99.59.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/08_🇯🇵日本专线6-0.1倍率_203.10.99.59.png) |
+| 09 | `🇺🇸美国凤凰城专线-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`09_🇺🇸美国凤凰城专线-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/09_🇺🇸美国凤凰城专线-0.1倍率_142.202.242.178.png) |
+| 10 | `🇺🇸美国凤凰城专线2-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`10_🇺🇸美国凤凰城专线2-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/10_🇺🇸美国凤凰城专线2-0.1倍率_142.202.242.178.png) |
+| 11 | `🇺🇸美国凤凰城专线3-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`11_🇺🇸美国凤凰城专线3-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/11_🇺🇸美国凤凰城专线3-0.1倍率_142.202.242.178.png) |
+| 12 | `🇺🇸美国凤凰城专线4-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`12_🇺🇸美国凤凰城专线4-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/12_🇺🇸美国凤凰城专线4-0.1倍率_142.202.242.178.png) |
+| 13 | `🇺🇸美国凤凰城专线5-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`13_🇺🇸美国凤凰城专线5-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/13_🇺🇸美国凤凰城专线5-0.1倍率_142.202.242.178.png) |
+| 14 | `🇺🇸美国ai解锁-0.1倍率` | `hysteria2` | 🔍 底层目标已探测 | `134.195.101.75` | United States Syracuse | Black Mesa (36%中性) | [`14_🇺🇸美国ai解锁-0.1倍率_134.195.101.75.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/14_🇺🇸美国ai解锁-0.1倍率_134.195.101.75.png) |
+| 15 | `🇺🇸美国纽约-0.01倍率` | `hysteria2` | 🔍 底层目标已探测 | `160.202.167.53` | United States New York | Psychz机房 (33%轻微) | [`15_🇺🇸美国纽约-0.01倍率_160.202.167.53.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/15_🇺🇸美国纽约-0.01倍率_160.202.167.53.png) |
+| 16 | `🇸🇬新加坡专线` | `hysteria2` | 🔍 底层目标已探测 | `203.27.106.140` | Singapore Singapore | GSL机房 (36%中性) | [`16_🇸🇬新加坡专线_203.27.106.140.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/16_🇸🇬新加坡专线_203.27.106.140.png) |
+| 17 | `🇸🇬新加坡专线2` | `hysteria2` | 🔍 底层目标已探测 | `203.27.106.140` | Singapore Singapore | GSL机房 (36%中性) | [`17_🇸🇬新加坡专线2_203.27.106.140.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/17_🇸🇬新加坡专线2_203.27.106.140.png) |
+| 18 | `🇸🇬新加坡专线3` | `hysteria2` | 🔍 底层目标已探测 | `203.27.106.140` | Singapore Singapore | GSL机房 (36%中性) | [`18_🇸🇬新加坡专线3_203.27.106.140.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/18_🇸🇬新加坡专线3_203.27.106.140.png) |
+| 19 | `🇭🇰香港家宽专线` | `hysteria2` | 🔍 底层目标已探测 | `165.84.140.225` | Hong Kong Hong Kong | HKBN家宽原生 (5%极度纯净) | [`19_🇭🇰香港家宽专线_165.84.140.225.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/19_🇭🇰香港家宽专线_165.84.140.225.png) |
+| 20 | `🇯🇵AWS日本1号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`20_🇯🇵AWS日本1号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/20_🇯🇵AWS日本1号_43.206.150.124.png) |
+| 21 | `🇯🇵AWS日本2号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`21_🇯🇵AWS日本2号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/21_🇯🇵AWS日本2号_43.206.150.124.png) |
+| 22 | `🇯🇵AWS日本3号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`22_🇯🇵AWS日本3号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/22_🇯🇵AWS日本3号_43.206.150.124.png) |
+| 23 | `🇯🇵AWS日本4号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`23_🇯🇵AWS日本4号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/23_🇯🇵AWS日本4号_43.206.150.124.png) |
+| 24 | `🇯🇵AWS日本5号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`24_🇯🇵AWS日本5号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/24_🇯🇵AWS日本5号_43.206.150.124.png) |
+| 25 | `🇯🇵AWS日本6号` | `vless` | 🔍 底层目标已探测 | `43.206.150.124` | Japan Tokyo | AWS机房 (30%轻微) | [`25_🇯🇵AWS日本6号_43.206.150.124.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/25_🇯🇵AWS日本6号_43.206.150.124.png) |
+| 26 | `🇯🇵AWS日本7号` | `vless` | 🔍 底层目标已探测 | `52.69.225.175` | Japan Tokyo | AWS机房 (30%轻微) | [`26_🇯🇵AWS日本7号_52.69.225.175.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/26_🇯🇵AWS日本7号_52.69.225.175.png) |
+| 27 | `🇯🇵AWS日本8号` | `vless` | 🔍 底层目标已探测 | `52.69.225.175` | Japan Tokyo | AWS机房 (30%轻微) | [`27_🇯🇵AWS日本8号_52.69.225.175.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/27_🇯🇵AWS日本8号_52.69.225.175.png) |
+| 28 | `🇯🇵AWS日本9号` | `vless` | 🔍 底层目标已探测 | `52.69.225.175` | Japan Tokyo | AWS机房 (30%轻微) | [`28_🇯🇵AWS日本9号_52.69.225.175.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/28_🇯🇵AWS日本9号_52.69.225.175.png) |
+| 29 | `🇹🇼台湾` | `vless` | 🔍 底层目标已探测 | `111.249.66.30` | Taiwan New Taipei | 中华电信家宽 (15%纯净) | [`29_🇹🇼台湾_111.249.66.30.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/29_🇹🇼台湾_111.249.66.30.png) |
+| 30 | `🇺🇸美国凤凰城1号-0.1倍率` | `vless` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`30_🇺🇸美国凤凰城1号-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/30_🇺🇸美国凤凰城1号-0.1倍率_142.202.242.178.png) |
+| 31 | `🇺🇸美国凤凰城2号-0.1倍率` | `vless` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`31_🇺🇸美国凤凰城2号-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/31_🇺🇸美国凤凰城2号-0.1倍率_142.202.242.178.png) |
+| 32 | `🇺🇸美国凤凰城3号-0.1倍率` | `vless` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`32_🇺🇸美国凤凰城3号-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/32_🇺🇸美国凤凰城3号-0.1倍率_142.202.242.178.png) |
+| 33 | `🇺🇸美国凤凰城4号-0.1倍率` | `vless` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`33_🇺🇸美国凤凰城4号-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/33_🇺🇸美国凤凰城4号-0.1倍率_142.202.242.178.png) |
+| 34 | `🇺🇸美国凤凰城5号-0.1倍率` | `vless` | 🔍 底层目标已探测 | `142.202.242.178` | United States Phoenix | Psychz机房 (33%轻微) | [`34_🇺🇸美国凤凰城5号-0.1倍率_142.202.242.178.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/34_🇺🇸美国凤凰城5号-0.1倍率_142.202.242.178.png) |
+| 35 | `🇺🇸美国ai-0.1倍率` | `vless` | 🔍 底层目标已探测 | `134.195.101.75` | United States Syracuse | Black Mesa (36%中性) | [`35_🇺🇸美国ai-0.1倍率_134.195.101.75.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/35_🇺🇸美国ai-0.1倍率_134.195.101.75.png) |
+| 36 | `🇭🇰香港HKBN` | `vless` | ✅ 代理连通正常 | `165.84.140.225` | Hong Kong Hong Kong | HKBN家宽原生 (5%极度纯净) | [`36_🇭🇰香港HKBN_165.84.140.225.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/36_🇭🇰香港HKBN_165.84.140.225.png) |
+| 37 | `🇭🇰香港HKBN2` | `vless` | ✅ 代理连通正常 | `165.84.140.225` | Hong Kong Hong Kong | HKBN家宽原生 (5%极度纯净) | [`37_🇭🇰香港HKBN2_165.84.140.225.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/37_🇭🇰香港HKBN2_165.84.140.225.png) |
+| 38 | `🇺🇸美国1号-0.1倍率` | `vless` | ✅ 代理连通正常 | `162.251.162.177` | United States Phoenix | iCastCenter (28%轻微) | [`38_🇺🇸美国1号-0.1倍率_162.251.162.177.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/38_🇺🇸美国1号-0.1倍率_162.251.162.177.png) |
+| 39 | `🇺🇸美国2号-0.1倍率` | `vless` | ✅ 代理连通正常 | `162.251.162.179` | United States Phoenix | iCastCenter (28%轻微) | [`39_🇺🇸美国2号-0.1倍率_162.251.162.179.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/39_🇺🇸美国2号-0.1倍率_162.251.162.179.png) |
+| 40 | `🇺🇸美国3号-0.1倍率` | `vless` | ✅ 代理连通正常 | `162.251.162.209` | United States Phoenix | iCastCenter (28%轻微) | [`40_🇺🇸美国3号-0.1倍率_162.251.162.209.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/40_🇺🇸美国3号-0.1倍率_162.251.162.209.png) |
+| 41 | `🇺🇸美国4号-0.1倍率` | `vless` | ✅ 代理连通正常 | `162.251.162.249` | United States Phoenix | iCastCenter (28%轻微) | [`41_🇺🇸美国4号-0.1倍率_162.251.162.249.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/41_🇺🇸美国4号-0.1倍率_162.251.162.249.png) |
+| 42 | `🇺🇸美国5号-0.1倍率` | `vless` | ✅ 代理连通正常 | `162.251.162.251` | United States Phoenix | iCastCenter (28%轻微) | [`42_🇺🇸美国5号-0.1倍率_162.251.162.251.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/42_🇺🇸美国5号-0.1倍率_162.251.162.251.png) |
+| 43 | `🇺🇸美国ai解锁` | `vless` | ✅ 代理连通正常 | `134.195.101.74` | United States Syracuse | Black Mesa (36%中性) | [`43_🇺🇸美国ai解锁_134.195.101.74.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/43_🇺🇸美国ai解锁_134.195.101.74.png) |
+| 44 | `🇺🇸美国1号-0.01倍率` | `vless` | ✅ 代理连通正常 | `160.202.167.53` | United States New York | Psychz机房 (33%轻微) | [`44_🇺🇸美国1号-0.01倍率_160.202.167.53.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/44_🇺🇸美国1号-0.01倍率_160.202.167.53.png) |
+| 45 | `🇺🇸美国2号-0.01倍率` | `vless` | ✅ 代理连通正常 | `160.202.167.53` | United States New York | Psychz机房 (33%轻微) | [`45_🇺🇸美国2号-0.01倍率_160.202.167.53.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/45_🇺🇸美国2号-0.01倍率_160.202.167.53.png) |
+| 46 | `🇯🇵日本1号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.50` | Japan Tokyo | GSL机房 (39%中性) | [`46_🇯🇵日本1号-0.1倍率_203.10.99.50.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/46_🇯🇵日本1号-0.1倍率_203.10.99.50.png) |
+| 47 | `🇯🇵日本2号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.50` | Japan Tokyo | GSL机房 (39%中性) | [`47_🇯🇵日本2号-0.1倍率_203.10.99.50.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/47_🇯🇵日本2号-0.1倍率_203.10.99.50.png) |
+| 48 | `🇯🇵日本3号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.50` | Japan Tokyo | GSL机房 (39%中性) | [`48_🇯🇵日本3号-0.1倍率_203.10.99.50.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/48_🇯🇵日本3号-0.1倍率_203.10.99.50.png) |
+| 49 | `🇯🇵日本4号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.58` | Japan Tokyo | GSL机房 (39%中性) | [`49_🇯🇵日本4号-0.1倍率_203.10.99.58.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/49_🇯🇵日本4号-0.1倍率_203.10.99.58.png) |
+| 50 | `🇯🇵日本5号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.58` | Japan Tokyo | GSL机房 (39%中性) | [`50_🇯🇵日本5号-0.1倍率_203.10.99.58.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/50_🇯🇵日本5号-0.1倍率_203.10.99.58.png) |
+| 51 | `🇯🇵日本6号-0.1倍率` | `vless` | ✅ 代理连通正常 | `203.10.99.58` | Japan Tokyo | GSL机房 (39%中性) | [`51_🇯🇵日本6号-0.1倍率_203.10.99.58.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/51_🇯🇵日本6号-0.1倍率_203.10.99.58.png) |
+| 52 | `🇸🇬新加坡三网专线1号` | `vless` | ✅ 代理连通正常 | `203.27.106.138` | Singapore Singapore | GSL机房 (36%中性) | [`52_🇸🇬新加坡三网专线1号_203.27.106.138.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/52_🇸🇬新加坡三网专线1号_203.27.106.138.png) |
+| 53 | `🇸🇬新加坡三网专线2号` | `vless` | ✅ 代理连通正常 | `203.27.106.138` | Singapore Singapore | GSL机房 (36%中性) | [`53_🇸🇬新加坡三网专线2号_203.27.106.138.png`](file:///C:/Users/Administrator/.gemini/antigravity/scratch/clash_results_sub2/53_🇸🇬新加坡三网专线2号_203.27.106.138.png) |
